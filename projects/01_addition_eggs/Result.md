@@ -132,3 +132,8 @@ I (15125) APPLE_MATH: 📖 อ่านต่อในโปรเจคถั�
 I (15125) main_task: Returned from app_main()
 ```
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/041ab2f9-e9b0-479c-a015-abbf07c622ca" />
+
+- 📚 หนังสือบนชั้น
+```c
+  
+```
