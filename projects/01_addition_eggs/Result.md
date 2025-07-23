@@ -1,4 +1,4 @@
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/e2cc236d-3878-4db5-b12e-6256df2b4856" /># 1. เปลี่ยนจำนวนไข่ได้
+# 1. เปลี่ยนจำนวนไข่
 ```c
 // หาบรรทัดนี้ในโค้ด:
 int eggs_already_have = 4;    // ไข่ไก่ที่แม่มีอยู่แล้ว
