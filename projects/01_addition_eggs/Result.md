@@ -203,3 +203,35 @@ I (16290) main_task: Returned from app_main()
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/7afbf882-5cb0-4aff-aa2f-7a9d2b03357e" />
 
 ### - 🌟 ดาวในท้องฟ้า
+```c
+I (16299) STAR_SKY: 🧮 ขั้นตอนการคิด:
+I (16299) STAR_SKY:    ดาวที่เห็นเมื่อคืน + ดาวที่เห็นคืนนี้
+I (16299) STAR_SKY:    = 6 + 5
+I (16299) STAR_SKY:    = 11 ดวง
+I (16299) STAR_SKY: 
+I (16299) STAR_SKY: ✅ คำตอบ:
+I (16299) STAR_SKY:    รวมแล้วเห็นดาวทั้งหมด 11 ดวง
+I (16299) STAR_SKY:
+I (16299) STAR_SKY: 🎨 ภาพประกอบ:
+I (16299) STAR_SKY:    ดาวเมื่อคืน: 🌟🌟🌟🌟🌟🌟 (6 ดวง)
+I (16299) STAR_SKY:    ดาวคืนนี้: 🌟🌟🌟🌟🌟 (5 ดวง)
+I (16299) STAR_SKY:    รวมทั้งหมด: 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟 (11 ดวง)
+I (16299) STAR_SKY:
+I (16299) STAR_SKY: 💡 ตัวอย่างเพิ่มเติม:
+I (16299) STAR_SKY:    ถ้าเมื่อคืนเห็นดาว 3 ดวง และคืนนี้เห็นเพิ่มอีก 2 ดวง
+I (16299) STAR_SKY:    รวมเห็นดาวทั้งหมด 3 + 2 = 5 ดวง
+I (16299) STAR_SKY:
+I (16299) STAR_SKY:    ถ้าเมื่อคืนเห็นดาว 7 ดวง และคืนนี้เห็นเพิ่มอีก 4 ดวง
+I (16299) STAR_SKY:    รวมเห็นดาวทั้งหมด 7 + 4 = 11 ดวง
+I (16309) STAR_SKY:
+I (16309) STAR_SKY: 📚 สิ่งที่เรียนรู้:
+I (16309) STAR_SKY:    1. การบวกเลข (Addition): a + b = c
+I (16309) STAR_SKY:    2. การใช้ตัวแปร (Variables) เก็บค่า
+I (16309) STAR_SKY:    3. การแสดงผลด้วย ESP_LOGI
+I (16309) STAR_SKY:    4. การแก้โจทย์แบบมีขั้นตอน
+I (16309) STAR_SKY:
+I (16309) STAR_SKY: 🎉 จบโปรแกรมนับดาวในท้องฟ้า!
+I (16309) STAR_SKY: 📖 อ่านต่อในโปรเจคถัดไป: 02_subtraction_clouds
+I (16309) main_task: Returned from app_main()
+```
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/9d9c737a-75e2-40f0-86ee-ec06c320eb4b" />
