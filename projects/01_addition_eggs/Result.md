@@ -89,4 +89,4 @@ I (15138) EGGS_MATH: 🎉 จบโปรแกรมนับไข่ไก่
 I (15138) EGGS_MATH: 📖 อ่านต่อในโปรเจคถัดไป: 02_subtraction_toys
 I (17138) main_task: Returned from app_main()
 ```
-
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/fd031f1e-60cc-48f5-aa61-25f8ac7d805b" />
