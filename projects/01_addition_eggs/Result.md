@@ -135,5 +135,37 @@ I (15125) main_task: Returned from app_main()
 
 - 📚 หนังสือบนชั้น
 ```c
-  
+  I (15605) APPLE_MATH: 🧮 ขั้นตอนการคิด:
+I (15605) APPLE_MATH:    หนังสือเดิมที่มีอยู่ + หนังสือที่ซื้อมาใหม่
+I (15605) APPLE_MATH:    = 3 + 5
+I (15605) APPLE_MATH:    = 8 ผล
+I (15605) APPLE_MATH: 
+I (15605) APPLE_MATH: ✅ คำตอบ:
+I (15605) APPLE_MATH:    ตอนนี้บนชั้นมีหนังสือ📚ทั้งหมด 8 เล่ม
+I (15605) APPLE_MATH:
+I (15605) APPLE_MATH: 🎨 ภาพประกอบ:
+I (15605) APPLE_MATH:    บนชั้นมีหนังสือ: 📚📚📚 (3 ผล)
+I (15605) APPLE_MATH:    ซื้อหนังสือมาเพิ่ม: 📚📚📚📚📚 (5 ผล)
+I (15605) APPLE_MATH:    รวม: 📚📚📚📚📚📚📚📚 (8 ผล)
+I (15605) APPLE_MATH:
+I (15605) APPLE_MATH: 💡 ตัวอย่างเพิ่มเติม:
+I (15605) APPLE_MATH:    ถ้ามีหนังสือ 7 เล่ม ซื้อเพิ่ม 3 เล่ม
+I (15605) APPLE_MATH:    จะได้หนังสือทั้งหมด 7 + 3 = 10 เล่ม
+I (15605) APPLE_MATH:
+I (15605) APPLE_MATH:    ถ้ามีหนังสือ 10 เล่ม ซื้อเพิ่ม 5 เล่ม
+I (15605) APPLE_MATH:    จะได้หนังสือทั้งหมด 10 + 5 = 15 เล่ม
+I (15605) APPLE_MATH:
+I (15605) APPLE_MATH: 📚 สิ่งที่เรียนรู้:
+I (15605) APPLE_MATH:    1. การบวกเลข (Addition): a + b = c
+I (15605) APPLE_MATH:    2. การใช้ตัวแปร (Variables) เก็บค่า
+I (15605) APPLE_MATH:    3. การแสดงผลด้วย ESP_LOGI
+I (15605) APPLE_MATH:    4. การแก้โจทย์แบบมีขั้นตอน
+I (15605) APPLE_MATH: 
+I (15605) APPLE_MATH: 🎉 จบโปรแกรมนับแอปเปิ้ลในตะกร้า!
+I (15615) APPLE_MATH: 📖 อ่านต่อในโปรเจคถัดไป: 02_subtraction_oranges
+I (15615) main_task: Returned from app_main()
 ```
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/172b7a2d-3657-42b3-8cc2-ade0f8c844c1" />
+
+- 🚗 รถในลานจอด
+
