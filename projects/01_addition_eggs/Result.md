@@ -1,4 +1,4 @@
-# 1. เปลี่ยนจำนวนไข่ได้
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/e2cc236d-3878-4db5-b12e-6256df2b4856" /># 1. เปลี่ยนจำนวนไข่ได้
 ```c
 // หาบรรทัดนี้ในโค้ด:
 int eggs_already_have = 4;    // ไข่ไก่ที่แม่มีอยู่แล้ว
@@ -99,7 +99,7 @@ I (17138) main_task: Returned from app_main()
 - 🌟 ดาวในท้องฟ้า
 
 ## Result
-### 🍎 แอปเปิ้ลในตะกร้า
+### - 🍎 แอปเปิ้ลในตะกร้า
 ```c
 I (15125) APPLE_MATH: 🧮 ขั้นตอนการคิด:
 I (15125) APPLE_MATH:    แอปเปิ้ลที่มีอยู่ + แอปเปิ้ลที่เก็บเพิ่ม
@@ -134,7 +134,7 @@ I (15125) main_task: Returned from app_main()
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/041ab2f9-e9b0-479c-a015-abbf07c622ca" />
 
 
-### 📚 หนังสือบนชั้น
+### - 📚 หนังสือบนชั้น
 ```c
   I (15605) APPLE_MATH: 🧮 ขั้นตอนการคิด:
 I (15605) APPLE_MATH:    หนังสือเดิมที่มีอยู่ + หนังสือที่ซื้อมาใหม่
@@ -168,5 +168,38 @@ I (15615) main_task: Returned from app_main()
 ```
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/172b7a2d-3657-42b3-8cc2-ade0f8c844c1" />
 
-### 🚗 รถในลานจอด
+### - 🚗 รถในลานจอด
+```c
+I (16280) CAR_PARK: 🧮 ขั้นตอนการคิด:
+I (16280) CAR_PARK:    รถเดิมที่จอดอยู่ + รถที่เข้ามาเพิ่ม
+I (16280) CAR_PARK:    = 5 + 4
+I (16280) CAR_PARK:    = 9 คัน
+I (16280) CAR_PARK: 
+I (16280) CAR_PARK: ✅ คำตอบ:
+I (16280) CAR_PARK:    ตอนนี้ในลานจอดมีรถทั้งหมด 9 คัน
+I (16280) CAR_PARK: 
+I (16280) CAR_PARK: 🎨 ภาพประกอบ:
+I (16280) CAR_PARK:    รถเดิม: 🚗🚗🚗🚗🚗 (5 คัน)
+I (16280) CAR_PARK:    รถที่เข้าใหม่: 🚗🚗🚗🚗 (4 คัน)
+I (16280) CAR_PARK:    รวม: 🚗🚗🚗🚗🚗🚗🚗🚗🚗 (9 คัน)
+I (16280) CAR_PARK:
+I (16280) CAR_PARK: 💡 ตัวอย่างเพิ่มเติม:
+I (16280) CAR_PARK:    ถ้ามีรถจอดอยู่แล้ว 3 คัน และมีเข้ามาอีก 2 คัน
+I (16280) CAR_PARK:    จะมีรถทั้งหมด 3 + 2 = 5 คัน
+I (16280) CAR_PARK:
+I (16280) CAR_PARK:    ถ้ามีรถจอดอยู่แล้ว 6 คัน และมีเข้ามาอีก 4 คัน
+I (16280) CAR_PARK:    จะมีรถทั้งหมด 6 + 4 = 10 คัน
+I (16280) CAR_PARK:
+I (16280) CAR_PARK: 📚 สิ่งที่เรียนรู้:
+I (16280) CAR_PARK:    1. การบวกเลข (Addition): a + b = c
+I (16280) CAR_PARK:    2. การใช้ตัวแปร (Variables) เก็บค่า
+I (16280) CAR_PARK:    3. การแสดงผลด้วย ESP_LOGI
+I (16280) CAR_PARK:    4. การแก้โจทย์แบบมีขั้นตอน
+I (16280) CAR_PARK:
+I (16290) CAR_PARK: 🎉 จบโปรแกรมนับรถในลานจอด!
+I (16290) CAR_PARK: 📖 อ่านต่อในโปรเจคถัดไป: 02_subtraction_bicycles
+I (16290) main_task: Returned from app_main()
+```
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/7afbf882-5cb0-4aff-aa2f-7a9d2b03357e" />
 
+### - 🌟 ดาวในท้องฟ้า
