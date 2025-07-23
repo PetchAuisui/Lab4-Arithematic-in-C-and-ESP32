@@ -90,3 +90,12 @@ I (15138) EGGS_MATH: 📖 อ่านต่อในโปรเจคถัด
 I (17138) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/fd031f1e-60cc-48f5-aa61-25f8ac7d805b" />
+
+# 3. สร้างโจทย์ใหม่ได้
+ลองเปลี่ยนเป็นโจทย์อื่น เช่น:
+- 🍎 แอปเปิ้ลในตะกร้า
+- 📚 หนังสือบนชั้น  
+- 🚗 รถในลานจอด
+- 🌟 ดาวในท้องฟ้า
+
+## Result
