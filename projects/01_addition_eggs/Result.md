@@ -99,7 +99,7 @@ I (17138) main_task: Returned from app_main()
 - 🌟 ดาวในท้องฟ้า
 
 ## Result
-- 🍎 แอปเปิ้ลในตะกร้า
+### 🍎 แอปเปิ้ลในตะกร้า
 ```c
 I (15125) APPLE_MATH: 🧮 ขั้นตอนการคิด:
 I (15125) APPLE_MATH:    แอปเปิ้ลที่มีอยู่ + แอปเปิ้ลที่เก็บเพิ่ม
@@ -133,7 +133,8 @@ I (15125) main_task: Returned from app_main()
 ```
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/041ab2f9-e9b0-479c-a015-abbf07c622ca" />
 
-- 📚 หนังสือบนชั้น
+
+### 📚 หนังสือบนชั้น
 ```c
   I (15605) APPLE_MATH: 🧮 ขั้นตอนการคิด:
 I (15605) APPLE_MATH:    หนังสือเดิมที่มีอยู่ + หนังสือที่ซื้อมาใหม่
@@ -167,5 +168,5 @@ I (15615) main_task: Returned from app_main()
 ```
 <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/172b7a2d-3657-42b3-8cc2-ade0f8c844c1" />
 
-- 🚗 รถในลานจอด
+### 🚗 รถในลานจอด
 
