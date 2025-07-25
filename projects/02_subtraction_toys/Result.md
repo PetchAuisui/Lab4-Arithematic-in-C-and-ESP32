@@ -168,3 +168,4 @@ I (13526) TOYS_MATH: 🎉 จบโปรแกรมนับของเล่
 I (13526) TOYS_MATH: 📖 อ่านต่อในโปรเจคถัดไป: 03_multiplication_candies
 I (15526) main_task: Returned from app_main()
 ```
+<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/f53e1158-adbd-46f3-ad27-806eb9bf039b" />
