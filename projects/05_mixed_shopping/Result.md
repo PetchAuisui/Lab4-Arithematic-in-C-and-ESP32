@@ -73,3 +73,9 @@ I (15827) SHOPPING_MATH: 📖 อ่านต่อในโปรเจคถ�
 I (17827) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/11ad071a-0a95-4305-99c9-aabfa3ee453f" />
+
+# 2.เปลี่ยนส่วนลดเป็นเปอร์เซ็นต์ (10%)
+## Result
+```c
+
+```
