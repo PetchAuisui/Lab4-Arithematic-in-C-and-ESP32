@@ -1,4 +1,4 @@
-# 1 เปลี่ยนจำนวนถุงลูกอม
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/3ca1c350-c91d-4450-81ca-a198ca5ca817" /># 1 เปลี่ยนจำนวนถุงลูกอม
 ```c
 // หาบรรทัดนี้ในโค้ด:
 int candy_bags = 5;         // จำนวนถุง
@@ -284,5 +284,70 @@ I (18102) main_task: Returned from app_main()
 
 # 3.สร้างตารางสูตรคูณ
 ```c
+I (15147) CANDIES_MATH: 🧮 ขั้นตอนการคิด:
+I (15147) CANDIES_MATH: มีลูกอม🍓สตรอเบอร์รี่ 3 ถุง แต่ละถุงมี 8 เม็ด
+I (15147) CANDIES_MATH: จะมีลูกอม🍓สตรอเบอร์รี่ทั้งหมด 3 × 8 = 24 เม็ด
+I (15147) CANDIES_MATH: มีลูกอม🍊ส้ม 2 ถุง แต่ละถุงมี 8 เม็ด
+I (15147) CANDIES_MATH: จะมีลูกอม🍊ส้มทั้งหมด 2 × 8 = 16 เม็ด
+I (15147) CANDIES_MATH: มีลูกอม🍇องุ่น 4 ถุง แต่ละถุงมี 8 เม็ด
+I (15147) CANDIES_MATH: จะมีลูกอม🍇องุ่นทั้งหมด 4 × 8 = 32 เม็ด
+I (15147) CANDIES_MATH: รวมลูกอม🍓🍊🍇ทั้งหมด 24 + 16 + 32 = 72 เม็ด
+I (15147) CANDIES_MATH: ✅ คำตอบ:
+I (15147) CANDIES_MATH:    มีลูกอมทั้งหมด 72 เม็ด
+I (15147) CANDIES_MATH: 
+I (15147) CANDIES_MATH: 🎨 ภาพประกอบ:
+I (15147) CANDIES_MATH:    ถุง🍓ที่ 1: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍓ที่ 2: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍓ที่ 3: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍊ที่ 4: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍊ที่ 5: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍇ที่ 6: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍇ที่ 7: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍇ที่ 7: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    ถุง🍇ที่ 7: 🍬🍬🍬🍬🍬🍬🍬🍬 (8 เม็ด)
+I (15147) CANDIES_MATH:    รวม:     72 เม็ด
+I (15147) CANDIES_MATH: 
+I (15147) CANDIES_MATH: 📊 ตารางสูตรคูณของ 8:
+I (15147) CANDIES_MATH:    1 x 8 = 8
+I (15147) CANDIES_MATH:    2 x 8 = 16
+I (15147) CANDIES_MATH:    3 x 8 = 24
+I (15147) CANDIES_MATH:    4 x 8 = 32
+I (15147) CANDIES_MATH:    5 x 8 = 40
+I (15147) CANDIES_MATH:    6 x 8 = 48
+I (15147) CANDIES_MATH:    7 x 8 = 56
+I (15147) CANDIES_MATH:    8 x 8 = 64
+I (15147) CANDIES_MATH:    9 x 8 = 72
+I (15147) CANDIES_MATH:    10 x 8 = 80
+I (15157) CANDIES_MATH: 💡 ตัวอย่างเพิ่มเติม:
+I (15157) CANDIES_MATH:    ถ้ามีถุงลูกอม 3 ถุง ถุงละ 8 เม็ด
+I (15157) CANDIES_MATH:    จะได้ลูกอม 3 × 8 = 24 เม็ด
+I (15157) CANDIES_MATH: 
+I (15157) CANDIES_MATH:    ถ้ามีถุงลูกอม 7 ถุง ถุงละ 4 เม็ด
+I (15157) CANDIES_MATH:    จะได้ลูกอม 7 × 4 = 28 เม็ด
+I (15157) CANDIES_MATH: 
+I (15157) CANDIES_MATH: 🔄 เปรียบเทียบการดำเนินการ:
+I (15157) CANDIES_MATH:    การบวก (+): เพิ่มจำนวน (เช่น ไข่ 4 + 2 = 6)
+I (15157) CANDIES_MATH:    การลบ (-): ลดจำนวน (เช่น ของเล่น 8 - 3 = 5)
+I (15157) CANDIES_MATH:    การคูณ (×): บวกซ้ำๆ (เช่น ลูกอม 5 × 6 = 30)
+I (15157) CANDIES_MATH:
+I (15157) CANDIES_MATH: 🎓 แนวคิดขั้นสูง:
+I (15157) CANDIES_MATH:    1. การคูณมีคุณสมบัติการสับเปลี่ยน:
+I (15157) CANDIES_MATH:       9 × 8 = 8 × 9 = 72
+I (15157) CANDIES_MATH:    2. การคูณด้วย 0 จะได้ 0 เสมอ:
+I (15157) CANDIES_MATH:       9 × 0 = 0 (ไม่มีถุงลูกอม)
+I (15157) CANDIES_MATH:    3. การคูณด้วย 1 จะได้ตัวเลขเดิม:
+I (15157) CANDIES_MATH:       8 × 1 = 8 (มีถุงเดียว)
+I (15157) CANDIES_MATH:
+I (15157) CANDIES_MATH: 📚 สิ่งที่เรียนรู้:
+I (15157) CANDIES_MATH:    1. การคูณเลข (Multiplication): a × b = c
+I (15157) CANDIES_MATH:    2. การใช้ for loop สำหรับการทำซ้ำ
+I (15157) CANDIES_MATH:    3. ความสัมพันธ์ระหว่างการคูณและการบวกซ้ำๆ
+I (15157) CANDIES_MATH:    4. คุณสมบัติพิเศษของการคูณ
+I (15157) CANDIES_MATH:    5. การแสดงผลแบบตาราง
+I (15157) CANDIES_MATH: 
+I (15157) CANDIES_MATH: 🎉 จบโปรแกรมนับลูกอมในถุง!
+I (15157) CANDIES_MATH: 📖 อ่านต่อในโปรเจคถัดไป: 04_division_cookies
+I (17157) main_task: Returned from app_main()
 ```
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/6857108d-4928-4897-b03c-54311525b6e7" />
 
