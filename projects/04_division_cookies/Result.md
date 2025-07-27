@@ -82,3 +82,5 @@ I (17603) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/a9757888-ce37-401d-bb78-f55713167f0f" />
 
+# 2.เพิ่มการตรวจสอบหารลงตัว
+
