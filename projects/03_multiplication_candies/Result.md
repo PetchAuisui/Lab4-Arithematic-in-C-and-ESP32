@@ -282,3 +282,7 @@ I (18102) main_task: Returned from app_main()
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/0d5f5c79-6a2f-47e9-ab25-9cd162e22220" />
 
+# 3.สร้างตารางสูตรคูณ
+```c
+```
+
