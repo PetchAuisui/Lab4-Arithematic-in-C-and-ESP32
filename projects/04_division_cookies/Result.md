@@ -339,6 +339,7 @@ I (17597) main_task: Returned from app_main()
 ```
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/d590aeff-1531-4c77-ae8f-eab1d1bc6b1c" />
+
 # 3.หาจำนวนเพื่อนที่เหมาะสม
 - ลองหาว่าคุกกี้ 30 ชิ้น จะแจกให้กี่คนได้หารลงตัว:
 ```c
@@ -352,9 +353,11 @@ for (int people = 1; people <= 10; people++) {
     }
 }
 ```
+
 ## Code
 ```c
 ```
+
 ## Result
 ```c
 ```
