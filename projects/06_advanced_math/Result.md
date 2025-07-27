@@ -1,4 +1,4 @@
-# 1.คำนวณพื้นที่สามเหลี่ยม
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/8ad3f547-22e1-4490-b438-6d3f86178fbc" /># 1.คำนวณพื้นที่สามเหลี่ยม
 ## Code
 ```c
 #include <stdio.h>
@@ -195,9 +195,67 @@ I (21628) main_task: Returned from app_main()
 # 2.คำนวณปริมาตรทรงกรวย
 ## Code
 ```c
+#include <stdio.h>
+#include <math.h>
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
+// 🏷️ TAG สำหรับ log
+static const char *TAG = "CONE_CALC";
+
+// 🔢 ค่าคงที่
+#define PI 3.14159265359
+
+// 🍦 ฟังก์ชันคำนวณปริมาตรทรงกรวย
+void calculate_cone(void) {
+    double radius = 7.0;    // รัศมี (ซม.)
+    double height = 12.0;   // ความสูง (ซม.)
+
+    double base_area = PI * radius * radius; // พื้นที่ฐาน
+    double volume = (1.0 / 3.0) * base_area * height; // ปริมาตร
+
+    ESP_LOGI(TAG, "\n🍦 ทรงกรวย");
+    ESP_LOGI(TAG, "╔══════════════════════════════════════╗");
+    ESP_LOGI(TAG, "║           ทรงกรวยไอศกรีม           ║");
+    ESP_LOGI(TAG, "╠══════════════════════════════════════╣");
+    ESP_LOGI(TAG, "║ 📏 รัศมี: %.2f ซม.", radius);
+    ESP_LOGI(TAG, "║ 📏 ความสูง: %.2f ซม.", height);
+    ESP_LOGI(TAG, "║ 📐 พื้นที่ฐาน: π×%.0f² = %.2f ตร.ซม.",
+             radius, base_area);
+    ESP_LOGI(TAG, "║ 🔺 ปริมาตร: ⅓×%.2f×%.2f = %.2f ลบ.ซม.",
+             base_area, height, volume);
+    ESP_LOGI(TAG, "║ 💧 เท่ากับ: %.3f ลิตร", volume / 1000.0);
+    ESP_LOGI(TAG, "╚══════════════════════════════════════╝");
+}
+
+// 🚀 จุดเริ่มต้นโปรแกรม
+void app_main(void) {
+    ESP_LOGI(TAG, "🚀 เริ่มต้นโปรแกรมคำนวณปริมาตรทรงกรวย\n");
+
+    vTaskDelay(pdMS_TO_TICKS(1000));  // รอให้ระบบเริ่มต้น
+
+    calculate_cone();  // เรียกใช้ฟังก์ชัน
+
+    ESP_LOGI(TAG, "\n✅ เสร็จสิ้นการคำนวณ!");
+}
 ```
 ## Result
 ```c
-
+I (13819) CONE_CALC:
+🍦 ทรงกรวย
+I (13819) CONE_CALC: ╔══════════════════════════════════════╗
+I (13819) CONE_CALC: ║           ทรงกรวยไอศกรีม           ║
+I (13819) CONE_CALC: ╠══════════════════════════════════════╣
+I (13819) CONE_CALC: ║ 📏 รัศมี: 7.00 ซม.
+I (13819) CONE_CALC: ║ 📏 ความสูง: 12.00 ซม.
+I (13829) CONE_CALC: ║ 📐 พื้นที่ฐาน: π×7² = 153.94 ตร.ซม.
+I (13829) CONE_CALC: ║ 🔺 ปริมาตร: ⅓×153.94×12.00 = 615.75 ลบ.ซม.
+I (13829) CONE_CALC: ║ 💧 เท่ากับ: 0.616 ลิตร
+I (13829) CONE_CALC: ╚══════════════════════════════════════╝
+I (13829) CONE_CALC:
+✅ เสร็จสิ้นการคำนวณ!
+I (13829) main_task: Returned from app_main()
 ```
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/168c4928-50c2-4c64-8148-937355262129" />
+
