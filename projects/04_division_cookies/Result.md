@@ -339,3 +339,22 @@ I (17597) main_task: Returned from app_main()
 ```
 
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/d590aeff-1531-4c77-ae8f-eab1d1bc6b1c" />
+# 3.หาจำนวนเพื่อนที่เหมาะสม
+- ลองหาว่าคุกกี้ 30 ชิ้น จะแจกให้กี่คนได้หารลงตัว:
+```c
+int cookies = 30;
+ESP_LOGI(TAG, "🔍 คุกกี้ %d ชิ้น หารลงตัวกับ:", cookies);
+
+for (int people = 1; people <= 10; people++) {
+    if (cookies % people == 0) {
+        ESP_LOGI(TAG, "   ✅ %d คน → คนละ %d ชิ้น", 
+                 people, cookies / people);
+    }
+}
+```
+## Code
+```c
+```
+## Result
+```c
+```
