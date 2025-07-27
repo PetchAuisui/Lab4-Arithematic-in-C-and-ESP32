@@ -190,4 +190,14 @@ I (21628) ADVANCED_MATH: 🎓 ได้เรียนรู้: คณิตศ
 I (21628) main_task: Returned from app_main()
 ```
 
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/29cd2ccf-4a32-4515-a387-a2c465f5c59c" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/fbd56e08-8420-4d61-8c0b-7da11cd92348" />
+
+# 2.คำนวณปริมาตรทรงกรวย
+## Code
+```c
+
+```
+## Result
+```c
+
+```
