@@ -245,7 +245,7 @@ void app_main(void) {
 I (13819) CONE_CALC:
 🍦 ทรงกรวย
 I (13819) CONE_CALC: ╔══════════════════════════════════════╗
-I (13819) CONE_CALC: ║           ทรงกรวยไอศกรีม           ║
+I (13819) CONE_CALC: ║           ทรงกรวย                  ║
 I (13819) CONE_CALC: ╠══════════════════════════════════════╣
 I (13819) CONE_CALC: ║ 📏 รัศมี: 7.00 ซม.
 I (13819) CONE_CALC: ║ 📏 ความสูง: 12.00 ซม.
@@ -257,5 +257,5 @@ I (13829) CONE_CALC:
 ✅ เสร็จสิ้นการคำนวณ!
 I (13829) main_task: Returned from app_main()
 ```
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/168c4928-50c2-4c64-8148-937355262129" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9e63a261-4674-4747-82a2-02e28c71304e" />
 
