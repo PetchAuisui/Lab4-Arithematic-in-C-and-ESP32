@@ -542,6 +542,177 @@ I (18725) main_task: Returned from app_main()
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/f0c10d0b-5b89-40dc-a03e-d579b095e19b" />
 
 # 3.เพิ่มภาษี VAT 7%
+## Code
+```c
+#include <stdio.h>
+#include <string.h>
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
+static const char *TAG = "SHOPPING_MATH";
+
+typedef struct {
+    char name[40];          
+    int quantity;           
+    float price_per_unit;   
+    float total_price;      
+} product_t;
+
+void calculate_product_total(product_t *product) {
+    product->total_price = product->quantity * product->price_per_unit;
+}
+
+void display_product(const product_t *product) {
+    ESP_LOGI(TAG, "   %s: %d × %.0f = %.0f บาท", 
+             product->name, product->quantity, product->price_per_unit, product->total_price);
+}
+
+float calculate_total_bill(product_t products[], int count) {
+    float total = 0.0;
+    for (int i = 0; i < count; i++) {
+        calculate_product_total(&products[i]);
+        total += products[i].total_price;
+    }
+    return total;
+}
+
+float apply_discount(float total, float discount) {
+    return total - discount;
+}
+
+float split_payment(float amount, int people) {
+    if (people <= 0) {
+        ESP_LOGE(TAG, "Error: จำนวนคนต้องมากกว่า 0");
+        return 0.0;
+    }
+    return amount / people;
+}
+
+void app_main(void)
+{
+    ESP_LOGI(TAG, "🛒 เริ่มต้นโปรแกรมซื้อของที่ตลาด 🛒");
+    ESP_LOGI(TAG, "=====================================");
+
+    product_t products[] = {
+        {"แอปเปิ้ล", 6, 15.0, 0.0},
+        {"กล้วย", 12, 8.0, 0.0},
+        {"ส้ม", 8, 12.0, 0.0},
+        {"ขนมปัง", 2, 20.0, 0.0}
+    };
+    int product_count = sizeof(products) / sizeof(products[0]);
+
+    float discount_percent = 10.0;    // ส่วนลด 10%
+    float discount = 0.0;             // ส่วนลดจริง (คำนวณทีหลัง)
+    float vat_rate = 0.07;            // ภาษีมูลค่าเพิ่ม 7%
+    float final_total = 0.0;
+    int people = 3;
+
+    ESP_LOGI(TAG, "📖 โจทย์:");
+    ESP_LOGI(TAG, "   แม่ไปซื้อของที่ตลาด:");
+    for (int i = 0; i < product_count; i++) {
+        ESP_LOGI(TAG, "   - %s: %d หน่วย หน่วยละ %.0f บาท", 
+                 products[i].name, products[i].quantity, products[i].price_per_unit);
+    }
+    ESP_LOGI(TAG, "   - มีส่วนลด: %.0f%%", discount_percent);
+    ESP_LOGI(TAG, "   - ภาษีมูลค่าเพิ่ม (VAT): 7%%");
+    ESP_LOGI(TAG, "   - แบ่งจ่าย: %d คน", people);
+    ESP_LOGI(TAG, "");
+
+    vTaskDelay(3000 / portTICK_PERIOD_MS);
+
+    ESP_LOGI(TAG, "🧮 ขั้นตอนการคิด:");
+    ESP_LOGI(TAG, "   1. คำนวณราคาแต่ละสินค้า (การคูณ):");
+    float subtotal = calculate_total_bill(products, product_count);
+    for (int i = 0; i < product_count; i++) {
+        display_product(&products[i]);
+    }
+    ESP_LOGI(TAG, "");
+
+    ESP_LOGI(TAG, "   2. รวมราคาทั้งหมด (การบวก): %.0f บาท", subtotal);
+    ESP_LOGI(TAG, "");
+
+    discount = subtotal * (discount_percent / 100.0);
+    float discounted_total = apply_discount(subtotal, discount);
+    ESP_LOGI(TAG, "   3. หักส่วนลด (การลบ): %.0f - %.0f%% (%.2f บาท) = %.2f บาท",
+             subtotal, discount_percent, discount, discounted_total);
+    ESP_LOGI(TAG, "");
+
+    float vat_amount = 0.0;
+
+
+    vat_amount = discounted_total * vat_rate;
+    final_total = discounted_total + vat_amount;
+    ESP_LOGI(TAG, "   4. คำนวณภาษี VAT (7%%): %.2f × 7%% = %.2f บาท", discounted_total, vat_amount);
+    ESP_LOGI(TAG, "   5. ยอดรวมหลัง VAT: %.2f + %.2f = %.2f บาท", discounted_total, vat_amount, final_total);
+    ESP_LOGI(TAG, "");
+
+    float per_person = split_payment(final_total, people);
+    ESP_LOGI(TAG, "   6. แบ่งจ่าย (การหาร): %.2f ÷ %d = %.2f บาท/คน", final_total, people, per_person);
+    ESP_LOGI(TAG, "");
+
+    ESP_LOGI(TAG, "🧾 ใบเสร็จรับเงิน:");
+    ESP_LOGI(TAG, "   ==========================================");
+    ESP_LOGI(TAG, "   🏪 ตลาดสดใหม่ 🏪");
+    ESP_LOGI(TAG, "   ==========================================");
+
+    for (int i = 0; i < product_count; i++) {
+        display_product(&products[i]);
+    }
+
+    ESP_LOGI(TAG, "   ----------------------------------------");
+    ESP_LOGI(TAG, "   ยอดรวม:                    %.2f บาท", subtotal);
+    ESP_LOGI(TAG, "   ส่วนลด:                   -%.2f บาท", discount);
+    ESP_LOGI(TAG, "   ยอดก่อน VAT:               %.2f บาท", discounted_total);
+    ESP_LOGI(TAG, "   ภาษี 7%%:                  +%.2f บาท", vat_amount);
+    ESP_LOGI(TAG, "   ========================================");
+    ESP_LOGI(TAG, "   ยอดสุทธิหลัง VAT:          %.2f บาท", final_total);
+    ESP_LOGI(TAG, "   แบ่งจ่าย %d คน:             %.2f บาท/คน", people, per_person);
+    ESP_LOGI(TAG, "   ========================================");
+    ESP_LOGI(TAG, "   ขอบคุณที่ใช้บริการ 😊");
+    ESP_LOGI(TAG, "");
+
+    ESP_LOGI(TAG, "🎉 จบโปรแกรมซื้อของที่ตลาด!");
+}
+```
 ## Result
 ```c
+I (16220) SHOPPING_MATH: 🧮 ขั้นตอนการคิด:
+I (16220) SHOPPING_MATH:    1. คำนวณราคาแต่ละสินค้า (การคูณ):
+I (16220) SHOPPING_MATH:    แอปเปิ้ล: 6 × 15 = 90 บาท
+I (16230) SHOPPING_MATH:    กล้วย: 12 × 8 = 96 บาท
+I (16230) SHOPPING_MATH:    ส้ม: 8 × 12 = 96 บาท
+I (16230) SHOPPING_MATH:    ขนมปัง: 2 × 20 = 40 บาท
+I (16230) SHOPPING_MATH: 
+I (16230) SHOPPING_MATH:    2. รวมราคาทั้งหมด (การบวก): 322 บาท
+I (16230) SHOPPING_MATH: 
+I (16230) SHOPPING_MATH:    3. หักส่วนลด (การลบ): 322 - 10% (32.20 บาท) = 289.80 บาท
+I (16230) SHOPPING_MATH:
+I (16230) SHOPPING_MATH:    4. คำนวณภาษี VAT (7%): 289.80 × 7% = 20.29 บาท
+I (16230) SHOPPING_MATH:    5. ยอดรวมหลัง VAT: 289.80 + 20.29 = 310.09 บาท
+I (16240) SHOPPING_MATH: 
+I (16240) SHOPPING_MATH:    6. แบ่งจ่าย (การหาร): 310.09 ÷ 3 = 103.36 บาท/คน
+I (16240) SHOPPING_MATH: 
+I (16240) SHOPPING_MATH: 🧾 ใบเสร็จรับเงิน:
+I (16240) SHOPPING_MATH:    ==========================================
+I (16240) SHOPPING_MATH:    🏪 ตลาดสดใหม่ 🏪
+I (16240) SHOPPING_MATH:    ==========================================
+I (16240) SHOPPING_MATH:    แอปเปิ้ล: 6 × 15 = 90 บาท
+I (16240) SHOPPING_MATH:    กล้วย: 12 × 8 = 96 บาท
+I (16240) SHOPPING_MATH:    ส้ม: 8 × 12 = 96 บาท
+I (16240) SHOPPING_MATH:    ขนมปัง: 2 × 20 = 40 บาท
+I (16240) SHOPPING_MATH:    ----------------------------------------
+I (16240) SHOPPING_MATH:    ยอดรวม:                    322.00 บาท
+I (16240) SHOPPING_MATH:    ส่วนลด:                   -32.20 บาท
+I (16240) SHOPPING_MATH:    ยอดก่อน VAT:               289.80 บาท
+I (16240) SHOPPING_MATH:    ภาษี 7%:                  +20.29 บาท
+I (16240) SHOPPING_MATH:    ========================================
+I (16240) SHOPPING_MATH:    ยอดสุทธิหลัง VAT:          310.09 บาท
+I (16240) SHOPPING_MATH:    แบ่งจ่าย 3 คน:             103.36 บาท/คน
+I (16240) SHOPPING_MATH:    ========================================
+I (16240) SHOPPING_MATH:    ขอบคุณที่ใช้บริการ 😊
+I (16240) SHOPPING_MATH:
+I (16240) SHOPPING_MATH: 🎉 จบโปรแกรมซื้อของที่ตลาด!
 ```
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/d5245c33-f590-4fb5-a765-481e73c852df" />
