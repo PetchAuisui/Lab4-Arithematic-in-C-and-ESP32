@@ -80,3 +80,5 @@ I (15593) COOKIES_MATH: 🎉 จบโปรแกรมแบ่งคุกก
 I (15593) COOKIES_MATH: 📖 อ่านต่อในโปรเจคถัดไป: 05_mixed_shopping
 I (17603) main_task: Returned from app_main()
 ```
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/c1e28b98-82d8-4a6f-a99e-dacabe26e54a" />
+
