@@ -321,3 +321,11 @@ I (13829) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9e63a261-4674-4747-82a2-02e28c71304e" />
 
+# 3.แปลงหน่วย (เมตร → ตารางเมตร → ไร่)
+## Code
+```c
+```
+
+## Result
+```c
+```
