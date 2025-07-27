@@ -2,134 +2,40 @@
 ## Code
 ```c
 #include <stdio.h>
-#include <string.h>
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-static const char *TAG = "SHOPPING_MATH";
+// 🏷️ TAG สำหรับ log
+static const char *TAG = "TRIANGLE_CALC";
 
-typedef struct {
-    char name[40];          
-    int quantity;           
-    float price_per_unit;   
-    float total_price;      
-} product_t;
+// 📐 ฟังก์ชันคำนวณพื้นที่สามเหลี่ยม
+void calculate_triangle(void) {
+    double base = 10.0;    // ฐาน (ซม.)
+    double height = 8.0;   // สูง (ซม.)
 
-void calculate_product_total(product_t *product) {
-    product->total_price = product->quantity * product->price_per_unit;
+    double area = 0.5 * base * height;  // พื้นที่
+
+    ESP_LOGI(TAG, "\n📐 คำนวณพื้นที่สามเหลี่ยม");
+    ESP_LOGI(TAG, "╔══════════════════════════════════════╗");
+    ESP_LOGI(TAG, "║           รูปสามเหลี่ยม             ║");
+    ESP_LOGI(TAG, "╠══════════════════════════════════════╣");
+    ESP_LOGI(TAG, "║ 📏 ฐาน: %.2f ซม.", base);
+    ESP_LOGI(TAG, "║ 📏 สูง: %.2f ซม.", height);
+    ESP_LOGI(TAG, "║ 📐 พื้นที่: ½×%.0f×%.0f = %.2f ตร.ซม.", 
+             base, height, area);
+    ESP_LOGI(TAG, "╚══════════════════════════════════════╝");
 }
 
-void display_product(const product_t *product) {
-    ESP_LOGI(TAG, "   %s: %d × %.0f = %.0f บาท", 
-             product->name, product->quantity, product->price_per_unit, product->total_price);
-}
+// 🚀 จุดเริ่มต้นของโปรแกรม
+void app_main(void) {
+    ESP_LOGI(TAG, "🚀 เริ่มต้นโปรแกรมคำนวณพื้นที่สามเหลี่ยม");
 
-float calculate_total_bill(product_t products[], int count) {
-    float total = 0.0;
-    for (int i = 0; i < count; i++) {
-        calculate_product_total(&products[i]);
-        total += products[i].total_price;
-    }
-    return total;
-}
+    vTaskDelay(pdMS_TO_TICKS(1000));  // หน่วงเวลาเล็กน้อย
 
-float apply_discount(float total, float discount) {
-    return total - discount;
-}
+    calculate_triangle();  // เรียกฟังก์ชันคำนวณ
 
-float split_payment(float amount, int people) {
-    if (people <= 0) {
-        ESP_LOGE(TAG, "Error: จำนวนคนต้องมากกว่า 0");
-        return 0.0;
-    }
-    return amount / people;
-}
-
-void app_main(void)
-{
-    ESP_LOGI(TAG, "🛒 เริ่มต้นโปรแกรมซื้อของที่ตลาด 🛒");
-    ESP_LOGI(TAG, "=====================================");
-
-    product_t products[] = {
-        {"แอปเปิ้ล", 6, 15.0, 0.0},
-        {"กล้วย", 12, 8.0, 0.0},
-        {"ส้ม", 8, 12.0, 0.0},
-        {"ขนมปัง", 2, 20.0, 0.0}
-    };
-    int product_count = sizeof(products) / sizeof(products[0]);
-
-    float discount_percent = 10.0;    // ส่วนลด 10%
-    float discount = 0.0;             // ส่วนลดจริง (คำนวณทีหลัง)
-    float vat_rate = 0.07;            // ภาษีมูลค่าเพิ่ม 7%
-    float final_total = 0.0;
-    int people = 3;
-
-    ESP_LOGI(TAG, "📖 โจทย์:");
-    ESP_LOGI(TAG, "   แม่ไปซื้อของที่ตลาด:");
-    for (int i = 0; i < product_count; i++) {
-        ESP_LOGI(TAG, "   - %s: %d หน่วย หน่วยละ %.0f บาท", 
-                 products[i].name, products[i].quantity, products[i].price_per_unit);
-    }
-    ESP_LOGI(TAG, "   - มีส่วนลด: %.0f%%", discount_percent);
-    ESP_LOGI(TAG, "   - ภาษีมูลค่าเพิ่ม (VAT): 7%%");
-    ESP_LOGI(TAG, "   - แบ่งจ่าย: %d คน", people);
-    ESP_LOGI(TAG, "");
-
-    vTaskDelay(3000 / portTICK_PERIOD_MS);
-
-    ESP_LOGI(TAG, "🧮 ขั้นตอนการคิด:");
-    ESP_LOGI(TAG, "   1. คำนวณราคาแต่ละสินค้า (การคูณ):");
-    float subtotal = calculate_total_bill(products, product_count);
-    for (int i = 0; i < product_count; i++) {
-        display_product(&products[i]);
-    }
-    ESP_LOGI(TAG, "");
-
-    ESP_LOGI(TAG, "   2. รวมราคาทั้งหมด (การบวก): %.0f บาท", subtotal);
-    ESP_LOGI(TAG, "");
-
-    discount = subtotal * (discount_percent / 100.0);
-    float discounted_total = apply_discount(subtotal, discount);
-    ESP_LOGI(TAG, "   3. หักส่วนลด (การลบ): %.0f - %.0f%% (%.2f บาท) = %.2f บาท",
-             subtotal, discount_percent, discount, discounted_total);
-    ESP_LOGI(TAG, "");
-
-    float vat_amount = 0.0;
-
-
-    vat_amount = discounted_total * vat_rate;
-    final_total = discounted_total + vat_amount;
-    ESP_LOGI(TAG, "   4. คำนวณภาษี VAT (7%%): %.2f × 7%% = %.2f บาท", discounted_total, vat_amount);
-    ESP_LOGI(TAG, "   5. ยอดรวมหลัง VAT: %.2f + %.2f = %.2f บาท", discounted_total, vat_amount, final_total);
-    ESP_LOGI(TAG, "");
-
-    float per_person = split_payment(final_total, people);
-    ESP_LOGI(TAG, "   6. แบ่งจ่าย (การหาร): %.2f ÷ %d = %.2f บาท/คน", final_total, people, per_person);
-    ESP_LOGI(TAG, "");
-
-    ESP_LOGI(TAG, "🧾 ใบเสร็จรับเงิน:");
-    ESP_LOGI(TAG, "   ==========================================");
-    ESP_LOGI(TAG, "   🏪 ตลาดสดใหม่ 🏪");
-    ESP_LOGI(TAG, "   ==========================================");
-
-    for (int i = 0; i < product_count; i++) {
-        display_product(&products[i]);
-    }
-
-    ESP_LOGI(TAG, "   ----------------------------------------");
-    ESP_LOGI(TAG, "   ยอดรวม:                    %.2f บาท", subtotal);
-    ESP_LOGI(TAG, "   ส่วนลด:                   -%.2f บาท", discount);
-    ESP_LOGI(TAG, "   ยอดก่อน VAT:               %.2f บาท", discounted_total);
-    ESP_LOGI(TAG, "   ภาษี 7%%:                  +%.2f บาท", vat_amount);
-    ESP_LOGI(TAG, "   ========================================");
-    ESP_LOGI(TAG, "   ยอดสุทธิหลัง VAT:          %.2f บาท", final_total);
-    ESP_LOGI(TAG, "   แบ่งจ่าย %d คน:             %.2f บาท/คน", people, per_person);
-    ESP_LOGI(TAG, "   ========================================");
-    ESP_LOGI(TAG, "   ขอบคุณที่ใช้บริการ 😊");
-    ESP_LOGI(TAG, "");
-
-    ESP_LOGI(TAG, "🎉 จบโปรแกรมซื้อของที่ตลาด!");
+    ESP_LOGI(TAG, "\n✅ เสร็จสิ้นการคำนวณ!");
 }
 
 ```
