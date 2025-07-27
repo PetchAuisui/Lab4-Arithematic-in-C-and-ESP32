@@ -1,5 +1,6 @@
 # 1.คำนวณพื้นที่สามเหลี่ยม
 ## Code
+```c
 #include <stdio.h>
 #include <math.h>
 #include "esp_log.h"
