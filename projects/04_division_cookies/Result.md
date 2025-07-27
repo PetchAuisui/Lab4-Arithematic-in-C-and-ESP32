@@ -83,4 +83,14 @@ I (17603) main_task: Returned from app_main()
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/a9757888-ce37-401d-bb78-f55713167f0f" />
 
 # 2.เพิ่มการตรวจสอบหารลงตัว
+- เพิ่มการตรวจสอบว่าหารลงตัวไหม:
+```c
+int cookies_per_person = total_cookies / friends;
+int remaining_cookies = total_cookies % friends;
 
+if (remaining_cookies == 0) {
+    ESP_LOGI(TAG, "✅ หารลงตัว! ทุกคนได้เท่ากัน");
+} else {
+    ESP_LOGI(TAG, "⚠️ หารไม่ลงตัว! เหลือ %d ชิ้น", remaining_cookies);
+}
+```
