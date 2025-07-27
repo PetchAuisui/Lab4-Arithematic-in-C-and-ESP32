@@ -83,4 +83,22 @@ I (20787) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/040b5d32-dd67-413c-9172-fbc03984d94d" />
 
+# 2.เพิ่มลูกอมหลายรส
+- เพิ่มลูกอมหลายรส:
+```c
+int strawberry_bags = 3;    // ถุงรสสตรอเบอร์รี่
+int orange_bags = 2;        // ถุงรสส้ม
+int grape_bags = 4;         // ถุงรสองุ่น
+
+int total_bags = strawberry_bags + orange_bags + grape_bags;
+int total_candies = total_bags * candies_per_bag;
+
+ESP_LOGI(TAG, "🍓 สตรอเบอร์รี่: %d ถุง = %d เม็ด", 
+         strawberry_bags, strawberry_bags * candies_per_bag);
+ESP_LOGI(TAG, "🍊 รสส้ม: %d ถุง = %d เม็ด", 
+         orange_bags, orange_bags * candies_per_bag);
+ESP_LOGI(TAG, "🍇 รสองุ่น: %d ถุง = %d เม็ด", 
+         grape_bags, grape_bags * candies_per_bag);
+```
+
 
