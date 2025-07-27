@@ -599,5 +599,5 @@ I (16798) CANDIES_MATH: 🎉 จบโปรแกรมนับลูกอม
 I (16798) CANDIES_MATH: 📖 อ่านต่อในโปรเจคถัดไป: 04_division_cookies
 I (18798) main_task: Returned from app_main()
 ```
-![Uploading image.png…]()
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/430202d2-4115-4077-919c-73c503b949bb" />
 
