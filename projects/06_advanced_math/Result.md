@@ -1,4 +1,4 @@
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/8ad3f547-22e1-4490-b438-6d3f86178fbc" /># 1.คำนวณพื้นที่สามเหลี่ยม
+# 1.คำนวณพื้นที่สามเหลี่ยม
 ## Code
 ```c
 #include <stdio.h>
