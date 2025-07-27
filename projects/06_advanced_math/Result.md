@@ -451,7 +451,7 @@ I (16356) MATH_PROGRAM:
 ✅ เสร็จสิ้นการคำนวณทั้งหมด!
 I (16356) main_task: Returned from app_main()
 ```
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9e63a261-4674-4747-82a2-02e28c71304e" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/33661a30-de1a-4557-9245-2c623d68880c" />
 
 # 3.แปลงหน่วย (เมตร → ตารางเมตร → ไร่)
 ## Code
