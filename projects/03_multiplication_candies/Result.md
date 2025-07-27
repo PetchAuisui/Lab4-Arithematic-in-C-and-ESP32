@@ -359,3 +359,17 @@ I (17157) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/6857108d-4928-4897-b03c-54311525b6e7" />
 
+# 4.แจกลูกอมให้เพื่อน
+- คำนวณการแจกลูกอม:
+```c
+int friends = 12;           // จำนวนเพื่อน
+int candies_per_friend = total_candies / friends;  // ลูกอมต่อคน
+int remaining_candies = total_candies % friends;   // ลูกอมที่เหลือ
+
+ESP_LOGI(TAG, "👥 แจกให้เพื่อน %d คน:", friends);
+ESP_LOGI(TAG, "   คนละ %d เม็ด", candies_per_friend);
+ESP_LOGI(TAG, "   เหลือ %d เม็ด", remaining_candies);
+```
+## Result
+```c
+```
