@@ -576,6 +576,19 @@ void app_main(void) {
 ```
 ## Result
 ```c
+I (9245) FINAL_CALCULATOR: ╔════════════════════════════════════════════════╗
+I (9245) FINAL_CALCULATOR: ║          🧮 เครื่องคิดเลขครบครัน v1.0.0        ║
+I (9245) FINAL_CALCULATOR: ║                ESP32 Calculator               ║
+I (9245) FINAL_CALCULATOR: ╠════════════════════════════════════════════════╣
+I (9245) FINAL_CALCULATOR: ║  📱 Modern • 🛡️ Safe • ⚡ Fast • 🎯 Accurate  ║
+I (9245) FINAL_CALCULATOR: ╚════════════════════════════════════════════════╝
+I (9245) FINAL_CALCULATOR:
+I (9245) FINAL_CALCULATOR:     🧮    💻    📊    🏪
+I (9245) FINAL_CALCULATOR:    Basic Advanced Stats Shop
+I (9245) FINAL_CALCULATOR:
+I (11245) FINAL_CALCULATOR: ⚡ ระบบพร้อมใช้งาน!
+I (11245) FINAL_CALCULATOR: 🛡️ ระบบป้องกันข้อผิดพลาดเปิดใช้งาน
+I (11245) FINAL_CALCULATOR: 💾 ระบบบันทึกประวัติพร้อม
 I (5565) FINAL_CALCULATOR: 
 ╔══════════════════════════════════════════════════╗
 I (5565) FINAL_CALCULATOR: ║                   🧮 เมนูหลัก                   ║
