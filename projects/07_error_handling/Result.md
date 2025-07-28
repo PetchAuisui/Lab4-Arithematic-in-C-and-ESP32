@@ -911,3 +911,13 @@ I (32238) ERROR_HANDLING: 🏆 ตอนนี้คุณสามารถเ�
 I (32238) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/88272d5e-c038-4b79-b7dc-9fb4278937b0" />
+
+# 3.ตรวจสอบรหัสประจำตัวประชาชน
+## Code
+```c
+
+```
+## Result
+```c
+
+```
