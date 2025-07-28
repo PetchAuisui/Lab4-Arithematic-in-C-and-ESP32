@@ -794,10 +794,8 @@ void app_main(void) {
     vTaskDelay(pdMS_TO_TICKS(3000));
 
     result = validate_email("siwarpatauisui@gmail.com");
-    ESP_LOGI(TAG, "%s", result.message);
 
     result = validate_phone("0954276527");
-    ESP_LOGI(TAG, "%s", result.message);
 
     show_error_handling_summary();
 
