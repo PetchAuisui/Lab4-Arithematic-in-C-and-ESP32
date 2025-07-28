@@ -1418,7 +1418,7 @@ I (21032) ERROR_HANDLING: 🎓 ได้เรียนรู้: enum, struct, 
 I (21032) ERROR_HANDLING: 🏆 ตอนนี้คุณสามารถเขียนโค้ดที่ปลอดภัยและน่าเชื่อถือแล้ว!
 I (21042) main_task: Returned from app_main()
 ```
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/9a0be1e4-ddc7-41e2-8da7-bb100c3b54b8" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/df807f9d-6d3e-4446-883e-5c29afd2aca9" />
 
 # 4.สร้างระบบ retry mechanism
 ## Code
