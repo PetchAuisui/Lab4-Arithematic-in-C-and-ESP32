@@ -101,6 +101,7 @@ ESP_LOGI(TAG, "🍇 รสองุ่น: %d ถุง = %d เม็ด",
          grape_bags, grape_bags * candies_per_bag);
 ```
 ## Code
+
 ```c
 #include <stdio.h>
 #include "esp_log.h"
