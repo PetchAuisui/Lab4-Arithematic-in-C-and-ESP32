@@ -428,3 +428,14 @@ I (23574) ERROR_HANDLING: 🏆 ตอนนี้คุณสามารถเ�
 I (23574) main_task: Returned from app_main()
 ```
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/dc044e85-ad77-42ac-8274-40e5033f6f33" />
+
+# 2.ตรวจสอบเบอร์โทรศัพท์
+## Code
+```c
+
+```
+
+## Result
+```c
+
+```
